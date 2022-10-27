@@ -22,3 +22,5 @@ coming soon
  ### <a href="https://git-scm.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg" class="media-object  img-responsive img-thumbnail" height="40" width="40" align="left"></a> GIT
  
  ### <a href="https://www.sourcetreeapp.com"><img src="https://dl2.macupdate.com/images/icons256/35643.png?time=1661765508" class="media-object  img-responsive img-thumbnail" height="40" width="40" align="left"></a> SOURCETREE
+
+### <a href="https://fund.krita.org"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Calligrakrita-base.svg/1200px-Calligrakrita-base.svg.png" class="media-object  img-responsive img-thumbnail" height="40" width="40" align="left"></a> KRITA
