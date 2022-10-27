@@ -12,9 +12,16 @@ Among the objectives of the game, we highlight the construction of scenarios and
 This is a unique way of learning as it combines traditional teaching methods with the use of games. The game allows students to engage in activities that will help them learn about World War I.
 
 ## 🌆 Snapshots
-coming soon
-
-
+![SNAP](https://github.com/Ayslan-gamedev/Running-For-The-History/blob/readme/readme%20Assets/bottons.png)
+![SNAP](https://github.com/Ayslan-gamedev/Running-For-The-History/blob/readme/readme%20Assets/ultra%20secreto%20document.png)
+![SNAP](https://github.com/Ayslan-gamedev/Running-For-The-History/blob/readme/readme%20Assets/art%20de%20fundo%20versao%20versao%20final.png)
+![SNAP](https://github.com/Ayslan-gamedev/Running-For-The-History/blob/readme/readme%20Assets/bomba.png)
+![SNAP](https://github.com/Ayslan-gamedev/Running-For-The-History/blob/readme/readme%20Assets/primeira%20parte%20do%20cenario.png)
+![SNAP](https://github.com/Ayslan-gamedev/Running-For-The-History/blob/readme/readme%20Assets/soldado%20britanico%20esquartejado.png)
+![SNAP](https://github.com/Ayslan-gamedev/Running-For-The-History/blob/readme/readme%20Assets/wireframe.png)
+![SNAP](https://github.com/Ayslan-gamedev/Running-For-The-History/blob/readme/readme%20Assets/wireframe2.png)
+![SNAP](https://github.com/Ayslan-gamedev/Running-For-The-History/blob/readme/readme%20Assets/wireframe3.png)
+![SNAP](https://github.com/Ayslan-gamedev/Running-For-The-History/blob/readme/readme%20Assets/plataformas.png)
 
 ## 💻 Technologies Used
  ### <a href="https://unity.com"><img src="https://preview.redd.it/tu3gt6ysfxq71.png?auto=webp&s=10ab55d9dc09e7ed6ea59bd5916800a5272d5969" class="media-object  img-responsive img-thumbnail" height="40" width="40" align="left"></a> UNITY ENGINE
