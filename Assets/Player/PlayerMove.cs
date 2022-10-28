@@ -20,6 +20,7 @@ public class PlayerMove : MonoBehaviour {
     }
 
     private void Update() {
+        MoveCamera();
         ControllAnim();
         Move();
         Jump();
@@ -69,5 +70,19 @@ public class PlayerMove : MonoBehaviour {
             else animator.Play(Animations.Walk.ToString());
         }
         else animator.Play(Animations.Jump.ToString());
+    }
+
+    private void MoveCamera() {
+        Vector3 newCameraPosition = Camera.main.gameObject.transform.position;
+
+        if(transform.position.x >= 0) newCameraPosition.x = transform.position.x;
+        else if(newCameraPosition.x > 0) newCameraPosition.x -= Time.deltaTime * 1f;
+        else newCameraPosition.x = 0;
+
+        if(transform.position.y >= 2) newCameraPosition.y = transform.position.y;
+        else if(newCameraPosition.y > 2) newCameraPosition.y -= Time.deltaTime * 1f;
+        else newCameraPosition.y = 2;
+
+        Camera.main.gameObject.transform.position = newCameraPosition;
     }
 }
