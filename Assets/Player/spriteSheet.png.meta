@@ -1,0 +1,492 @@
+fileFormatVersion: 2
+guid: f93efa5d2df05c74ca496e4659ab3688
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1279641216440365143
+    second: Braco_R
+  - first:
+      213: -7061273471751745712
+    second: Cabeca
+  - first:
+      213: 2493017830172554336
+    second: Braco_L
+  - first:
+      213: 3676457998561298202
+    second: Tronco
+  - first:
+      213: 7893265282979163916
+    second: soldado_4
+  - first:
+      213: -6618045714829367559
+    second: Antebraco_R
+  - first:
+      213: -4804858626398359200
+    second: Antebraco_L
+  - first:
+      213: -274769459938560053
+    second: soldado_7
+  - first:
+      213: 7058040850576795485
+    second: soldado_8
+  - first:
+      213: 7755482058265000938
+    second: Coxa_R
+  - first:
+      213: 2207453349090706033
+    second: Quadril
+  - first:
+      213: -6574241915497740228
+    second: Coxa_L
+  - first:
+      213: 3242385447247683197
+    second: Canela_R
+  - first:
+      213: -8342616492559841350
+    second: Canela_L
+  - first:
+      213: 4890407846161288678
+    second: Pe_R
+  - first:
+      213: 6211752736435735588
+    second: Pe_L
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Braco_R
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 2362
+        width: 422
+        height: 377
+      alignment: 9
+      pivot: {x: 0.9008705, y: 0.8771856}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af8f1ee71dcd3ee0800000000000000
+      internalID: -1279641216440365143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cabeca
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 2674
+        width: 720
+        height: 729
+      alignment: 9
+      pivot: {x: 0.57529926, y: 0.04913255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f095e8031510e90800000000000000
+      internalID: -7061273471751745712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Braco_L
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 2355
+        width: 493
+        height: 380
+      alignment: 9
+      pivot: {x: 0.08226623, y: 0.89356303}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064762a028af89220800000000000000
+      internalID: 2493017830172554336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tronco
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1735
+        width: 543
+        height: 747
+      alignment: 9
+      pivot: {x: 0.5090303, y: 0.06348604}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17c3eb2217650330800000000000000
+      internalID: 3676457998561298202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Antebraco_R
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1509
+        width: 192
+        height: 661
+      alignment: 9
+      pivot: {x: 0.5127694, y: 0.9265443}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6ac4c7c7af724a0800000000000000
+      internalID: -6618045714829367559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Antebraco_L
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 1639
+        width: 226
+        height: 565
+      alignment: 9
+      pivot: {x: 0.5325458, y: 0.92091185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061fd895986b15db0800000000000000
+      internalID: -4804858626398359200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coxa_R
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 777
+        width: 346
+        height: 523
+      alignment: 9
+      pivot: {x: 0.8259487, y: 0.87970895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aebfcc877d101ab60800000000000000
+      internalID: 7755482058265000938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quadril
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 1136
+        width: 549
+        height: 510
+      alignment: 9
+      pivot: {x: 0.5000004, y: 0.049224254}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1724cca102372ae10800000000000000
+      internalID: 2207453349090706033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coxa_L
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 824
+        width: 295
+        height: 462
+      alignment: 9
+      pivot: {x: 0.17587726, y: 0.89269674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3806474fc993c4a0800000000000000
+      internalID: -6574241915497740228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canela_R
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 433
+        width: 230
+        height: 548
+      alignment: 9
+      pivot: {x: 0.5746173, y: 0.88923}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e1818a2644ffc20800000000000000
+      internalID: 3242385447247683197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canela_L
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 440
+        width: 204
+        height: 530
+      alignment: 9
+      pivot: {x: 0.3798188, y: 0.8978231}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7c7a74082193c80800000000000000
+      internalID: -8342616492559841350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pe_R
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 125
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.7845726, y: 0.7809243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed0a3d86083ed340800000000000000
+      internalID: 4890407846161288678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pe_L
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 132
+        width: 332
+        height: 178
+      alignment: 9
+      pivot: {x: 0.2636921, y: 0.76169866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c00d7d334943650800000000000000
+      internalID: 6211752736435735588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Pe_R: 4890407846161288678
+      Braco_R: -1279641216440365143
+      Coxa_L: -6574241915497740228
+      Canela_R: 3242385447247683197
+      Pe_L: 6211752736435735588
+      Coxa_R: 7755482058265000938
+      Quadril: 2207453349090706033
+      Canela_L: -8342616492559841350
+      Braco_L: 2493017830172554336
+      Antebraco_L: -4804858626398359200
+      Antebraco_R: -6618045714829367559
+      Cabeca: -7061273471751745712
+      Tronco: 3676457998561298202
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
