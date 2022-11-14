@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
@@ -14,6 +15,8 @@ public class PlayerMove : MonoBehaviour {
     private enum Animations { Idle, Walk, Jump }
     private Animator animator;
 
+    public bool canMov = true;
+
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -23,7 +26,7 @@ public class PlayerMove : MonoBehaviour {
         MoveCamera();
         ControllAnim();
         Move();
-        Jump();
+        Jump();  
     }
 
     private byte CanJump() {
@@ -47,21 +50,23 @@ public class PlayerMove : MonoBehaviour {
     private void Move() {
         float xDirection = Input.GetAxis(INPUT_AXIS_HORIZONTAL);
         rb.velocity = new Vector2(xDirection * speed, rb.velocity.y);
-
-        if(xDirection > 0 && transform.localScale.x < 0) {
-            Vector2 theScale = transform.localScale;
-            theScale.x *= -1;
-            transform.localScale = theScale;
-        }
-        else if(xDirection < 0 && transform.localScale.x > 0) {
-            Vector2 theScale = transform.localScale;
-            theScale.x *= -1;
-            transform.localScale = theScale;
+        
+        if(canMov == true) {
+            if(xDirection > 0 && transform.localScale.x < 0) {
+                Vector2 theScale = transform.localScale;
+                theScale.x *= -1;
+                transform.localScale = theScale;
+            }
+            else if(xDirection < 0 && transform.localScale.x > 0) {
+                Vector2 theScale = transform.localScale;
+                theScale.x *= -1;
+                transform.localScale = theScale;
+            }
         }
     }
 
     private void Jump() {
-        if(Input.GetButtonDown("Jump") && CanJump() == 1) rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        if(Input.GetButtonDown("Jump") && CanJump() == 1 && canMov == true) rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
     private void ControllAnim() {
