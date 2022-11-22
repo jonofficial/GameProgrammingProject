@@ -41,7 +41,6 @@ public class QuestionsController : MonoBehaviour  {
             else optionValues[i - options.Length - 1] = colluns[i];
         }
 
-        optionsDrop.options.Add(new Dropdown.OptionData() { text = "Selecione a resposta" });
         foreach(string c in options) {
             optionsDrop.options.Add(new Dropdown.OptionData() { text = c });
         }
@@ -79,5 +78,6 @@ public class QuestionsController : MonoBehaviour  {
         optionsDrop.value = 0;
 
         questionInterface.SetActive(false);
+        playerMovementScript.canMov = true; // faz o player voltar a se movimentar
     }
 }
