@@ -92,10 +92,10 @@ public class PlayerMove : MonoBehaviour {
     }
 
     private void Move() {
-        float xDirection = Input.GetAxis(INPUT_AXIS_HORIZONTAL);
-        rb.velocity = new Vector2(xDirection * speed, rb.velocity.y);
-        
         if(canMov == true) {
+            float xDirection = Input.GetAxis(INPUT_AXIS_HORIZONTAL);
+            rb.velocity = new Vector2(xDirection * speed, rb.velocity.y);
+
             if(xDirection > 0 && transform.localScale.x < 0) {
                 Vector2 theScale = transform.localScale;
                 theScale.x *= -1;
@@ -107,6 +107,7 @@ public class PlayerMove : MonoBehaviour {
                 transform.localScale = theScale;
             }
         }
+        else rb.velocity = Vector2.zero;
     }
 
     private void Jump() {
