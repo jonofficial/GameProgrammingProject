@@ -1,5 +1,5 @@
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour {
     [SerializeField] private protected float speed;
@@ -24,9 +24,17 @@ public class PlayerMove : MonoBehaviour {
     private protected Vector2 lastPlataform = Vector2.zero;
     private protected Vector2 checkPoint;
 
+    [SerializeField] private Slider lifeBar;
+    [SerializeField] private Text lifeQuant;
+    
+    private int life = 3;
+    private byte forceReturn = 0;
+
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        LifeManager(+100);
     }
 
     private void Update() {
@@ -36,18 +44,32 @@ public class PlayerMove : MonoBehaviour {
         Jump();  
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.CompareTag(CHECK_TAG)) {
-            lastPlataform = transform.position;
-        }
+    private void LifeManager(float damage) {
+        lifeBar.value += damage;
 
-        if(collision.CompareTag(CHECKPOINT_TAG)) {
-            checkPoint = transform.position;
+        if(lifeBar.value <= 0) {
+            transform.position = checkPoint;   
+            life--;
+            lifeQuant.text = life.ToString();
+
+            lifeBar.value = 100;
         }
+        else if(forceReturn == 1) {
+            transform.position = lastPlataform;
+            forceReturn = 0;
+
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.CompareTag(CHECK_TAG)) lastPlataform = transform.position;
+        if(collision.CompareTag(CHECKPOINT_TAG)) checkPoint = transform.position;
 
         if(collision.CompareTag(HITBOX_TAG)) {
-            transform.position = lastPlataform;
+            forceReturn = 1;
+
             rb.velocity = Vector2.zero;
+            LifeManager(-15);
         }
     }
 
