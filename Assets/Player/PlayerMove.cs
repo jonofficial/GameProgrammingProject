@@ -17,6 +17,12 @@ public class PlayerMove : MonoBehaviour {
 
     public bool canMov = true;
 
+    private const string CHECK_TAG = "check";
+    private const string HITBOX_TAG = "HitBox";
+
+    private protected Vector2 lastPlataform = Vector2.zero;
+    private protected Vector2 checkPoint;
+
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -27,6 +33,17 @@ public class PlayerMove : MonoBehaviour {
         ControllAnim();
         Move();
         Jump();  
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.CompareTag(CHECK_TAG)) {
+            lastPlataform = transform.position;
+        }
+
+        if(collision.CompareTag(HITBOX_TAG)) {
+            transform.position = lastPlataform;
+            rb.velocity = Vector2.zero;
+        }
     }
 
     private byte CanJump() {
