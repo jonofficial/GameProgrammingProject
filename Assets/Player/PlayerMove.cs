@@ -18,6 +18,7 @@ public class PlayerMove : MonoBehaviour {
     public bool canMov = true;
 
     private const string CHECK_TAG = "check";
+    private const string CHECKPOINT_TAG = "CheckPoint";
     private const string HITBOX_TAG = "HitBox";
 
     private protected Vector2 lastPlataform = Vector2.zero;
@@ -38,6 +39,10 @@ public class PlayerMove : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.CompareTag(CHECK_TAG)) {
             lastPlataform = transform.position;
+        }
+
+        if(collision.CompareTag(CHECKPOINT_TAG)) {
+            checkPoint = transform.position;
         }
 
         if(collision.CompareTag(HITBOX_TAG)) {
