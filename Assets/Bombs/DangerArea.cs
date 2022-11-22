@@ -23,7 +23,7 @@ public class DangerArea : MonoBehaviour {
         if (playerPostionX > areaLimit[0].position.x && playerPostionX < areaLimit[1].position.x) {
             if (timer >= timeToSpawn) {
                 for (int i = 0; i < 1; i++)
-                    Instantiate(bombPreFab, new Vector2(Random.Range(playerPostionX - maxSpawnBombDistance, playerPostionX + maxSpawnBombDistance), 10 + Mathf.Pow(i, i)), transform.rotation);
+                    Instantiate(bombPreFab, new Vector2(Random.Range(playerPostionX - maxSpawnBombDistance, playerPostionX + maxSpawnBombDistance), 15 + Mathf.Pow(i, i)), transform.rotation);
 
                 timer = 0;
             }

@@ -38,13 +38,15 @@ public class PlayerMove : MonoBehaviour {
     }
 
     private void Update() {
+        if(Input.GetKeyDown(KeyCode.L)) canMov = !canMov;
+
         MoveCamera();
         ControllAnim();
         Move();
         Jump();  
     }
 
-    private void LifeManager(float damage) {
+    public void LifeManager(float damage) {
         lifeBar.value += damage;
 
         if(lifeBar.value <= 0) {

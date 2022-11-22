@@ -21,7 +21,9 @@ public class Bomb : MonoBehaviour {
 
         if (!collision.CompareTag("Bomb")) {
             if (playerDistance < 5 && playerDistance > -5 && playerObject.transform.position.y <= transform.position.y) {
-                //playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(force.x, force.y), ForceMode2D.Impulse);
+                playerObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(force.x, force.y), ForceMode2D.Impulse);
+                playerObject.GetComponent<PlayerMove>().LifeManager(-30);
             }
         }
         if (collision.CompareTag("Player")) {
