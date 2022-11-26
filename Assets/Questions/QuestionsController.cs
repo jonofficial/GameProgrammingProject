@@ -19,7 +19,7 @@ public class QuestionsController : MonoBehaviour  {
 
     // Chamado quando o objeto aparece na cena
     private void Start() {
-        dialogFile = Application.dataPath + FILE_LOCATE; // define local do arquivo de dialogos
+        dialogFile = Application.streamingAssetsPath + FILE_LOCATE; // define local do arquivo de dialogos
         StreamReader stream = new StreamReader(dialogFile); // coleta dados do arquivo de dialogo
         lines = stream.ReadToEnd().Split('/'); // separa as linhas do arquivo de dialogo e aramazena no array
     }
