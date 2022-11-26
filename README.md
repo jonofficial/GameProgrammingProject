@@ -1,4 +1,5 @@
 # 📖 Running For The History - SENAI PROJECT
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/ayslan-gamedev/Running-For-The-History/main?color=blue&style=flat-square)
 <a href="https://github.com/Ayslan-gamedev/Running-For-The-History/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ayslan-gamedev/Running-For-The-History?color=blue&style=flat-square"></a>
 
 This project is my final technical course work presented to the SENAI Technical Training Program (SENAI - CETAFAJU - Education and Technology Center - Albano Franco), as part of the requirements necessary to obtain the title of Technician in Game Programming Digital.
