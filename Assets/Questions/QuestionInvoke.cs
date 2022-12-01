@@ -13,7 +13,7 @@ public class QuestionInvoke : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.CompareTag(PLAYER_TAG)) {
             questionsController.ShowQuestion();
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 }

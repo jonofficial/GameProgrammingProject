@@ -41,11 +41,11 @@ public class QuestionsController : MonoBehaviour  {
             else optionValues[i - options.Length - 1] = colluns[i];
         }
 
+        optionsDrop.options.Add(new Dropdown.OptionData() { text = string.Empty });
         foreach(string c in options) {
             optionsDrop.options.Add(new Dropdown.OptionData() { text = c });
         }
     }
-
 
     // Referente ao Dropdown de respostas do usuario
     public void SelectOption() {
@@ -64,6 +64,7 @@ public class QuestionsController : MonoBehaviour  {
             // resposta errada
             case "0":
                 Debug.Log("resposta errada");
+                playerMovementScript.LifeManager(-1000);
                 break;
 
             default: Debug.LogError(optionValues[optionsDrop.value - 1] + " is a invalid option in"); break;

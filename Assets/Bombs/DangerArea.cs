@@ -6,7 +6,7 @@ public class DangerArea : MonoBehaviour {
     [SerializeField] private protected Transform[] areaLimit;
 
     private protected GameObject playerObject;
-    private protected float playerPostionX;
+    private protected Vector2 playerPostion;
 
     [SerializeField] private protected float timeToSpawn;
     private protected float timer = 0;
@@ -18,12 +18,12 @@ public class DangerArea : MonoBehaviour {
     }
 
     void Update() {
-        playerPostionX = playerObject.transform.position.x;
+        playerPostion = playerObject.transform.position;
 
-        if (playerPostionX > areaLimit[0].position.x && playerPostionX < areaLimit[1].position.x) {
+        if (playerPostion.x > areaLimit[0].position.x && playerPostion.x < areaLimit[1].position.x) {
             if (timer >= timeToSpawn) {
                 for (int i = 0; i < 1; i++)
-                    Instantiate(bombPreFab, new Vector2(Random.Range(playerPostionX - maxSpawnBombDistance, playerPostionX + maxSpawnBombDistance), 15 + Mathf.Pow(i, i)), transform.rotation);
+                    Instantiate(bombPreFab, new Vector2(Random.Range(playerPostion.x - maxSpawnBombDistance, playerPostion.x + maxSpawnBombDistance), playerPostion.y + 15 + Mathf.Pow(i, i)), transform.rotation);
 
                 timer = 0;
             }
