@@ -1,6 +1,6 @@
-Desenvolvedor;Ola, esta é uma versão de testes;Como pode ve o sistema de dialogo esta funcionando perfeitamente; Dando um pouco de turtorial rapido....; A barra vermelha em cima é sua barra de vida, quando ela acabar voce ira perder uma vida e voltar ao ultimo chackpoint, que tao sendo representando por quadrados azuis; se voce tiver a vida em zero por enquanto não acontece nada pous isso nao foi feito ainda; pule e desvie das bombas!
-/Desenvolvedor; Tome cuidado com as bombas caindo de cima em locais especificos do mapa, elas te impurrão
-/Desenvolvedor;Aseguir estao algumas questoes do enem para serem respondidas; se voce erra ira morrer e perder uma barra inteira de vida, no jogo comum se acertar todas passa de fase, boa sorte
-/Desenvolvedor; iae, ja conseguiu resolver aquelas questoes?
-/Desenvolvedor; voce concluiu todos os testes dos principais sistemas, agora, que tal um desafio? >:3; se conseguir finalizar me manda um print
-/Desenvolvedor; siga em frente, se conseguir finalizar me manda um print pfvr 
+---/Olá, bem vindo ao protótipo Running for the history/ para se mover use as setas direta e esquerda para andar e barra de espaço para pular./ Para checkpoint, você deve passar pelas bandeiras azuis e vermelhas. /Para interagir com o NPC clique com a esquerda do mouse, ao aparecer o incone de interação. /Siga até o final da fase respondendo as quastões, até logo!
+/Soldado Axel/Proteja-se! Estamos no meio de uma guerra! Assassinaram o Arquiduque Ferdinando, e agora iremos declarar guerra!
+/Soldado Axel;Você deve coletar os documentos e responder as questões para chegar ao fim! Boa Sorte!
+/Soldado Axel; Você conseguiu responder tão rápido! Cuidado com as bombas, esta área está cheia delas!
+/Soldado Axel;Você conseguiu chegar ao fim, obrigada por jogar nosso protótipo!
+/Soldado Axel

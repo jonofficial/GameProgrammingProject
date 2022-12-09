@@ -13,7 +13,7 @@ public class QuestionsController : MonoBehaviour  {
     private protected string[] lines, colluns; // line: linha completa / colluns: celulas
 
     [SerializeField] private protected Text questionText; // objetos de textos da unity
-    [SerializeField] private protected Dropdown optionsDrop; // objetos de textos da unity
+    [SerializeField] private protected Text[] optionsText; // textos dos botoes de fala
 
     private protected string[] optionValues; // atuais valores das respostas
 
@@ -41,16 +41,13 @@ public class QuestionsController : MonoBehaviour  {
             else optionValues[i - options.Length - 1] = colluns[i];
         }
 
-        optionsDrop.options.Add(new Dropdown.OptionData() { text = string.Empty });
-        foreach(string c in options) {
-            optionsDrop.options.Add(new Dropdown.OptionData() { text = c });
-        }
+        for(int i = 0; i < options.Length; i++) optionsText[i].text = options[i];
     }
 
     // Referente ao Dropdown de respostas do usuario
-    public void SelectOption() {
+    public void SelectOption(int idButton) {
         // verifica resposta do jogador
-        switch(optionValues[optionsDrop.value - 1]) {
+        switch(optionValues[idButton]) {
             // resposta certa
             case "1":
                 Debug.Log("certa resposta!!");
@@ -67,7 +64,7 @@ public class QuestionsController : MonoBehaviour  {
                 playerMovementScript.LifeManager(-1000);
                 break;
 
-            default: Debug.LogError(optionValues[optionsDrop.value - 1] + " is a invalid option in"); break;
+            default: Debug.LogError(optionValues[idButton] + " is a invalid option in"); break;
         }
 
         EndQuestion();
@@ -75,8 +72,7 @@ public class QuestionsController : MonoBehaviour  {
 
     private void EndQuestion() {
         questionText.text = string.Empty;
-        optionsDrop.ClearOptions(); // limpa o dropdown
-        optionsDrop.value = 0;
+        for (int i = 0; i < optionsText.Length; i++) optionsText[i].text = string.Empty;
 
         questionInterface.SetActive(false);
         playerMovementScript.canMov = true; // faz o player voltar a se movimentar
