@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 03b550fd53a99134aa18df34ba1eb097
+guid: 03cb0cbfface4f64e9cc60bede5d8d2f
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -182,10 +182,10 @@ TextureImporter:
       name: plataformas_0
       rect:
         serializedVersion: 2
-        x: 475
+        x: 489
         y: 401
-        width: 241
-        height: 243
+        width: 227
+        height: 184
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: plataformas_1
       rect:
         serializedVersion: 2
-        x: 2297
+        x: 2328
         y: 628
-        width: 386
-        height: 234
+        width: 285
+        height: 203
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,10 +287,10 @@ TextureImporter:
       name: plataformas_5
       rect:
         serializedVersion: 2
-        x: 4910
+        x: 4949
         y: 263
-        width: 287
-        height: 232
+        width: 218
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
