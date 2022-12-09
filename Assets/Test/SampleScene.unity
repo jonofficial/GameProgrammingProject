@@ -5683,6 +5683,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8339088058336532660, guid: b8752be14d2f4e84ab955bf476cdb540, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8339088059585568453, guid: b8752be14d2f4e84ab955bf476cdb540, type: 3}
       propertyPath: m_Name
       value: PlayerManager

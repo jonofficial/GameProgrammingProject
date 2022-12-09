@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour {
         Debug.Log(arrResolutions);
         for(int i = 0; i < arrResolutions.Length; i++) Debug.Log(i + ": " + arrResolutions[i]);
 
-        foreach(Resolution r in arrResolutions) resolutions.Add(string.Format("{0} X {1}", r.width, r.width));
+        foreach(Resolution r in arrResolutions) resolutions.Add(string.Format("{0} X {1}", r.width, r.height));
 
         dropResolutions.AddOptions(resolutions);
         dropResolutions.value = (resolutions.Count - 1);
