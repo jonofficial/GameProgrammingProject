@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour {
     [SerializeField] private protected float speed;
@@ -14,8 +15,6 @@ public class PlayerMove : MonoBehaviour {
 
     private enum Animations { Idle, Walk, Jump }
     private Animator animator;
-
-    public bool canMov = true;
 
     private const string CHECK_TAG = "check";
     private const string CHECKPOINT_TAG = "CheckPoint";
@@ -38,8 +37,6 @@ public class PlayerMove : MonoBehaviour {
     }
 
     private void Update() {
-        if(Input.GetKeyDown(KeyCode.L)) canMov = !canMov;
-
         MoveCamera();
         ControllAnim();
         Move();
@@ -50,6 +47,8 @@ public class PlayerMove : MonoBehaviour {
         lifeBar.value += damage;
 
         if(lifeBar.value <= 0) {
+            if(life <= 0) SceneManager.LoadSceneAsync(3);
+
             transform.position = checkPoint;   
             life--;
             lifeQuant.text = life.ToString();
@@ -59,7 +58,6 @@ public class PlayerMove : MonoBehaviour {
         else if(forceReturn == 1) {
             transform.position = lastPlataform;
             forceReturn = 0;
-
         }
     }
 
@@ -94,26 +92,23 @@ public class PlayerMove : MonoBehaviour {
     }
 
     private void Move() {
-        if(canMov == true) {
-            float xDirection = Input.GetAxis(INPUT_AXIS_HORIZONTAL);
-            rb.velocity = new Vector2(xDirection * speed, rb.velocity.y);
+        float xDirection = Input.GetAxis(INPUT_AXIS_HORIZONTAL);
+        rb.velocity = new Vector2(xDirection * speed, rb.velocity.y);
 
-            if(xDirection > 0 && transform.localScale.x < 0) {
-                Vector2 theScale = transform.localScale;
-                theScale.x *= -1;
-                transform.localScale = theScale;
-            }
-            else if(xDirection < 0 && transform.localScale.x > 0) {
-                Vector2 theScale = transform.localScale;
-                theScale.x *= -1;
-                transform.localScale = theScale;
-            }
+        if(xDirection > 0 && transform.localScale.x < 0) {
+            Vector2 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
         }
-        else rb.velocity = Vector2.zero;
+        else if(xDirection < 0 && transform.localScale.x > 0) {
+            Vector2 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
+        }
     }
 
     private void Jump() {
-        if(Input.GetButtonDown("Jump") && CanJump() == 1 && canMov == true) rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        if(Input.GetButtonDown("Jump") && CanJump() == 1) rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
     private void ControllAnim() {

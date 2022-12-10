@@ -28,7 +28,7 @@ public class QuestionsController : MonoBehaviour  {
     public void ShowQuestion() {
         questionInterface.SetActive(true);
         int dialogID = Random.Range(0, lines.Length);
-        playerMovementScript.canMov = false; // faz o player não conseguir se movimentar
+        Time.timeScale = 0; // faz o player não conseguir se movimentar
         
         colluns = lines[dialogID].Split(';'); // separa as celulas de dialogo
         questionText.text = colluns[0]; // escreve a pergunta
@@ -50,17 +50,16 @@ public class QuestionsController : MonoBehaviour  {
         switch(optionValues[idButton]) {
             // resposta certa
             case "1":
-                Debug.Log("certa resposta!!");
+                playerMovementScript.LifeManager(+500);
                 break;
 
             // resposta quase certa
             case "0,5":
-                Debug.Log("voce esta quase certo");
+                playerMovementScript.LifeManager(-500);
                 break;
 
             // resposta errada
             case "0":
-                Debug.Log("resposta errada");
                 playerMovementScript.LifeManager(-1000);
                 break;
 
@@ -75,6 +74,6 @@ public class QuestionsController : MonoBehaviour  {
         for (int i = 0; i < optionsText.Length; i++) optionsText[i].text = string.Empty;
 
         questionInterface.SetActive(false);
-        playerMovementScript.canMov = true; // faz o player voltar a se movimentar
+        Time.timeScale = 1; // faz o player voltar a se movimentar
     }
 }

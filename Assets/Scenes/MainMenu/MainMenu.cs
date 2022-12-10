@@ -19,10 +19,6 @@ public class MainMenu : MonoBehaviour {
         dropQualitys.ClearOptions();
          
         Resolution[] arrResolutions = Screen.resolutions;
-        
-        Debug.Log(arrResolutions);
-        for(int i = 0; i < arrResolutions.Length; i++) Debug.Log(i + ": " + arrResolutions[i]);
-
         foreach(Resolution r in arrResolutions) resolutions.Add(string.Format("{0} X {1}", r.width, r.height));
 
         dropResolutions.AddOptions(resolutions);
@@ -47,7 +43,7 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void StartGame() {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(2);
     }
 
     public void Quit() {

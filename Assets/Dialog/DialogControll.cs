@@ -28,7 +28,7 @@ public class DialogControll : MonoBehaviour {
     private float timer;
 
     // Chamado quando o objeto aparece na cena
-    private void Start() {
+    private void Awake() {
         dialogFile = Application.streamingAssetsPath + FILE_LOCATE; // define local do arquivo de dialogos
         StreamReader stream = new StreamReader(dialogFile); // coleta dados do arquivo de dialogo
         lines = stream.ReadToEnd().Split('/'); // separa as linhas do arquivo de dialogo e aramazena no array
@@ -52,7 +52,7 @@ public class DialogControll : MonoBehaviour {
 
     // inicia o dialogo por meio do id referente a linha de fala
     public void StartDialog(int dialogID) {
-        playerMovementScript.canMov = false; // faz o player não conseguir se movimentar
+        Time.timeScale = 0; // faz o player não conseguir se movimentar
         dialogInterface.SetActive(true); // ativa a interface
 
         colluns = lines[dialogID].Split(';'); // separa as celulas de dialogo |0| = nome do npc 
@@ -83,7 +83,7 @@ public class DialogControll : MonoBehaviour {
         currentCollun = 1;
         write = 0;
 
-        playerMovementScript.canMov = true; // faz o player voltar a se movimentar
+        Time.timeScale = 1; // faz o player voltar a se movimentar
         dialogInterface.SetActive(false); // desativa interface
     }
 

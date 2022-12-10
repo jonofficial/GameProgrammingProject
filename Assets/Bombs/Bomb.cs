@@ -20,7 +20,7 @@ public class Bomb : MonoBehaviour {
         float playerDistance = playerObject.transform.position.x - transform.position.x;
 
         if (!collision.CompareTag("Bomb")) {
-            if (playerDistance < 5 && playerDistance > -5 && playerObject.transform.position.y <= transform.position.y) {
+            if (playerDistance < 2.5 && playerDistance > -2.5 && playerObject.transform.position.y <= transform.position.y) {
                 playerObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(force.x, force.y), ForceMode2D.Impulse);
                 playerObject.GetComponent<PlayerMove>().LifeManager(-30);
