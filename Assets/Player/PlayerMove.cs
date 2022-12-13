@@ -29,9 +29,16 @@ public class PlayerMove : MonoBehaviour {
     private int life = 3;
     private byte forceReturn = 0;
 
+    [SerializeField] private protected AudioSource audio_walk, audio_jump;
+    private float distanceX = 0;
+    byte playJump = 0;
+
+
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        distanceX = transform.position.x;
 
         LifeManager(+100);
     }
@@ -95,6 +102,11 @@ public class PlayerMove : MonoBehaviour {
         float xDirection = Input.GetAxis(INPUT_AXIS_HORIZONTAL);
         rb.velocity = new Vector2(xDirection * speed, rb.velocity.y);
 
+        if(CanJump() == 1&&(transform.position.x > distanceX + 1.5f || transform.position.x < distanceX - 1.5f)) {
+            audio_walk.Play();
+            distanceX = transform.position.x;
+        }
+
         if(xDirection > 0 && transform.localScale.x < 0) {
             Vector2 theScale = transform.localScale;
             theScale.x *= -1;
@@ -108,15 +120,24 @@ public class PlayerMove : MonoBehaviour {
     }
 
     private void Jump() {
-        if(Input.GetButtonDown("Jump") && CanJump() == 1) rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        if(Input.GetButtonDown("Jump") && CanJump() == 1) {
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
     }
 
     private void ControllAnim() {
         if(CanJump() == 1) {
             if(rb.velocity.x == 0) animator.Play(Animations.Idle.ToString());
             else animator.Play(Animations.Walk.ToString());
+            playJump = 1;
         }
-        else animator.Play(Animations.Jump.ToString());
+        else {
+            animator.Play(Animations.Jump.ToString());
+            if(playJump == 1) {
+                audio_jump.Play();
+                playJump = 0;
+            }
+        }
     }
 
     private void MoveCamera() {
