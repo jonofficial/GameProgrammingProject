@@ -855,11 +855,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 
+  cloudProjectId: 32b01e1d-513f-48f8-ae18-82ce4d4d923e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: GameProgrammingProject
+  organizationId: anirudh_2515
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
