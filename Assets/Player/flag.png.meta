@@ -1,27 +1,9 @@
 fileFormatVersion: 2
-guid: 4a4d8d9c7fea56548adc3d33f1d8147d
+guid: 82b93e2327179c84e869451dff17d4c1
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 6182957760813348812
-    second: plataformas 2_0
-  - first:
-      213: -750799185328455331
-    second: plataformas 2_1
-  - first:
-      213: 5268359410507949668
-    second: plataformas 2_2
-  - first:
-      213: -4679830354554621032
-    second: plataformas 2_3
-  - first:
-      213: 785868497766842489
-    second: plataformas 2_4
-  - first:
-      213: -3774785609572226181
-    second: plataformas 2_5
+  internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -38,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -81,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -92,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -104,10 +90,11 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -116,18 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Lumin
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -140,6 +116,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -152,133 +142,76 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plataformas 2_0
+      name: bandeira_0
       rect:
         serializedVersion: 2
-        x: 281
-        y: 743
-        width: 513
-        height: 218
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 26
+        y: 11
+        width: 490
+        height: 540
+      alignment: 9
+      pivot: {x: 0.052014712, y: 0.027870655}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc7368223574ec550800000000000000
-      internalID: 6182957760813348812
+      spriteID: 46a6762921c65c1439232a0149621c55
+      internalID: 635124781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plataformas 2_1
+      name: bandeira_1
       rect:
         serializedVersion: 2
-        x: 1017
-        y: 548
-        width: 581
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 675
+        y: 10
+        width: 490
+        height: 540
+      alignment: 9
+      pivot: {x: 0.056032516, y: 0.031516474}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5148dc6e10a495f0800000000000000
-      internalID: -750799185328455331
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: plataformas 2_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 154
-        height: 719
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 466a96c88f8fc1940800000000000000
-      internalID: 5268359410507949668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: plataformas 2_3
-      rect:
-        serializedVersion: 2
-        x: 330
-        y: 0
-        width: 234
-        height: 601
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8937eab5617ed0fb0800000000000000
-      internalID: -4679830354554621032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: plataformas 2_4
-      rect:
-        serializedVersion: 2
-        x: 732
-        y: 0
-        width: 631
-        height: 296
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97000992c37f7ea00800000000000000
-      internalID: 785868497766842489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: plataformas 2_5
-      rect:
-        serializedVersion: 2
-        x: 1559
-        y: 0
-        width: 289
-        height: 518
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7be03edc744d9bc0800000000000000
-      internalID: -3774785609572226181
+      spriteID: b2ec6a269df005a4bbe0bd97b566f43f
+      internalID: 1207650394
       vertices: []
       indices: 
       edges: []
@@ -294,15 +227,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      plataformas 2_3: -4679830354554621032
-      plataformas 2_0: 6182957760813348812
-      plataformas 2_5: -3774785609572226181
-      plataformas 2_2: 5268359410507949668
-      plataformas 2_4: 785868497766842489
-      plataformas 2_1: -750799185328455331
-  spritePackingTag: 
+      bandeira_0: 635124781
+      bandeira_1: 1207650394
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

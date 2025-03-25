@@ -4,97 +4,106 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogControll : MonoBehaviour {
-    [SerializeField] private GameObject dialogInterface; // interface de dialogo
-    [SerializeField] private PlayerMove playerMovementScript; // script do player
+    [SerializeField] private GameObject dialogInterface; // dialog interface
+    [SerializeField] private PlayerMove playerMovementScript; // player script
 
-    // arquivo de dialogo
+    // dialog file
     private protected string dialogFile; 
-    private protected const string FILE_LOCATE = "/Dialog/pastadeteste.csv";
+    private protected const string FILE_LOCATE = "/Dialog/welcome.csv";
 
-    private protected string[] lines, colluns; // line: linha completa de dialogo / colluns: celulas de dialogo
-    [SerializeField] private protected Text dialogText, npcName; // objetos de textos da unity
+    private protected string[] lines, colluns; // line: complete dialog line / colluns: dialog cells
+    [SerializeField] private protected Text dialogText, npcName; // Unity text objects
 
-    private int currentCollun = 0; // celula de dialogo atualmente
-    private int currentChar = 0; // numero de caracteres digitados
+    private int currentCollun = 0; // current dialog cell
+    private int currentChar = 0; // number of typed characters
 
-    private byte write = 0; // define quando iniciara a escrita do texto
+    private byte write = 0; // defines when text writing will start
 
-    // velocidades
+    // speeds
     private protected const float DIALOG_SPEED_NORMAL = 0; 
     private protected const float DIALOG_SPEED_FAST = -50;
 
-    // timer de escrita do dialogo
+    // dialog writing timer
     private float timeToShow;
     private float timer;
 
-    // Chamado quando o objeto aparece na cena
+    // Called when the object appears in the scene
     private void Awake() {
-        dialogFile = Application.streamingAssetsPath + FILE_LOCATE; // define local do arquivo de dialogos
-        StreamReader stream = new StreamReader(dialogFile); // coleta dados do arquivo de dialogo
-        lines = stream.ReadToEnd().Split('/'); // separa as linhas do arquivo de dialogo e aramazena no array
-
-        EndDialog(); // normaliza todas variveis
+        dialogFile = Application.streamingAssetsPath + FILE_LOCATE; // defines dialog file location
+        StreamReader stream = new StreamReader(dialogFile); // fetches data from the dialog file
+        lines = stream.ReadToEnd().Split('/'); // separates the lines of the dialog file and stores them in the array
+        PrintAllDialogs();
+        EndDialog(); // normalizes all variables
     }
 
-    // chamado a cada freame
+    private void PrintAllDialogs() {
+        Debug.Log("Printing all dialogs:");
+
+        for (int i = 0; i < lines.Length; i++) {
+            string[] colluns = lines[i].Split(';');
+            Debug.Log($"Dialog {i}: {string.Join(" | ", colluns)}");
+        }
+    }
+
+    // called every frame
     private void Update() {
-        // caso o comando write inicie e o numero de caracteres esteja dentro do indice de caracteres 
+        // if the write command starts and the number of characters is within the character index
         if(write == 1 && currentChar < colluns[currentCollun].Length) {
             if(timer < timeToShow) timer += Time.deltaTime; // timer
             else {
-                dialogText.text += colluns[currentCollun][currentChar]; // soma um caracter
-                currentChar++; // atualiza o numero atual de caracteres
-                timer = 0; // reseta o timer
+                dialogText.text += colluns[currentCollun][currentChar]; // adds a character
+                currentChar++; // updates the current number of characters
+                timer = 0; // resets the timer
             }
         }
-        else write = 0; // finaliza o comando laco de escrita quando o numero de caracteres chega ao fim
+        else write = 0; // ends the writing loop command when the number of characters reaches the end
     }
 
-    // inicia o dialogo por meio do id referente a linha de fala
+    // starts the dialog using the ID referring to the speech line
     public void StartDialog(int dialogID) {
-        Time.timeScale = 0; // faz o player não conseguir se movimentar
-        dialogInterface.SetActive(true); // ativa a interface
+        Time.timeScale = 0; // prevents the player from moving
+        dialogInterface.SetActive(true); // activates the interface
 
-        colluns = lines[dialogID].Split(';'); // separa as celulas de dialogo |0| = nome do npc 
-        npcName.text = colluns[0]; // escreve o nome do npc que fala na tela
-        WriteDialog(); // inicia escrita do dialogo
+        colluns = lines[dialogID].Split(';'); // separates the dialog cells |0| = NPC name 
+        npcName.text = colluns[0]; // writes the NPC's name on the screen
+        WriteDialog(); // starts dialog writing
     }
 
-    // controla a escrita ou a finalizacao do dialogo
+    // controls the writing or completion of the dialog
     private void WriteDialog() {
         if(currentCollun < colluns.Length) {
-            timeToShow = DIALOG_SPEED_NORMAL; // define velocid
+            timeToShow = DIALOG_SPEED_NORMAL; // sets speed
             
-            // zera variaveis
+            // resets variables
             currentChar = 0;
             timer = 0;
             write = 1;
         }
-        else EndDialog(); // finaliza o dialogo
+        else EndDialog(); // ends the dialog
     }
 
-    // finaliza o dialgo noralizando as variaveis
+    // ends the dialog by normalizing variables
     private void EndDialog() {
-        dialogText.text = String.Empty; // apaga dialogo
-        npcName.text = String.Empty; // apaga nome
+        dialogText.text = String.Empty; // clears the dialog
+        npcName.text = String.Empty; // clears the name
 
-        // zera as variaveis
+        // resets variables
         colluns = new string[0];
         currentCollun = 1;
         write = 0;
 
-        Time.timeScale = 1; // faz o player voltar a se movimentar
-        dialogInterface.SetActive(false); // desativa interface
+        Time.timeScale = 1; // allows the player to move again
+        dialogInterface.SetActive(false); // deactivates the interface
     }
 
-    // referente ao botao de passar dialogo na unity
+    // linked to the button for proceeding with the dialog in Unity
     public void NextPharse() {
-        // verifica se a frase ainda ta sendo escrita
-        if(currentChar < colluns[currentCollun].Length) timeToShow = DIALOG_SPEED_FAST; // aumenta a velocidade
+        // checks if the phrase is still being written
+        if(currentChar < colluns[currentCollun].Length) timeToShow = DIALOG_SPEED_FAST; // increases speed
         else {
-            dialogText.text = String.Empty; // apaga dialogo anterior
+            dialogText.text = String.Empty; // clears the previous dialog
             
-            // passa para o proximo dialogo
+            // moves to the next dialog
             currentCollun++; 
             WriteDialog();
         }

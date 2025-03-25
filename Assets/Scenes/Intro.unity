@@ -194,8 +194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Programa\xE7\xE3o:\nAyslan Vieira Fontes\n\nDesign:\nMaria Gabrielle Lima
-    Silva\n\nSonoplatia:\nIsadora Santos Andrade\n"
+  m_Text: "Game Designer and Artist:\n\n Anirudh Santhanam\n Game Engineers:\n\n Kaushik S\n Jonathan Harrison\n"
 --- !u!222 &557040762
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -787,7 +786,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Pressione qualquer bot\xE3o para iniciar"
+  m_Text: "Press any button to continue"
 --- !u!222 &1745051179
 CanvasRenderer:
   m_ObjectHideFlags: 0
